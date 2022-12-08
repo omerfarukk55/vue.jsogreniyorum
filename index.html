@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    
+
    
 </head>
 <body>
@@ -27,8 +28,17 @@
             <img src="./img/groups_FILL0_wght400_GRAD0_opsz48.svg" alt="">
              <img src="./img/donut_large_FILL0_wght400_GRAD0_opsz48.svg" alt="">
             <img src="./img/chat_FILL0_wght400_GRAD0_opsz48.svg" alt=""></li>
-            <img src="./img/more_vert_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+            <img src="./img/more_vert_FILL0_wght400_GRAD0_opsz48.svg" alt="" class="img83" >
             </div>
+         </div>
+         <div class="listhead">
+            <ul class="list-inline">
+                <li title="yeni grup" > yeni grup</li>
+                <li title="yeni topluluk"> yeni topluluk</li>
+                <li title="yıldızlı mesajlar"> Yıldızlı Mesajlar</li>
+                <li title="Ayarlar"> Ayarlar</li>
+                <li title="cıkış"> Çıkış</li>
+            </ul>
          </div>
          <div class="searchchat">
                 <input type="text" placeholder="search message ?">
@@ -242,7 +252,7 @@
         
         <div id="sidebox"  class="side box">
           <div class="footer1" >
-            <img class="img82" src="./img/arrow_back_FILL0_wght400_GRAD0_opsz48.svg" alt=""   >
+            <img class="img82" src="./img/arrow_back_FILL0_wght400_GRAD0_opsz48.svg" alt="" >
             <h3> Profil</h3>
             </div>
           <main class="ortanca" >
@@ -261,8 +271,10 @@
           </main>
         </div>
     </div>
+        <div class="rightcontainer">
+
         
-        <div class="rightSide">
+        <div class="rightSide" id="img11">
             
             <div class="header">
                 <div class="userImg">
@@ -275,7 +287,7 @@
                  </div>
                  
                  <div class="nav_icons">
-                   <img src="./img/search_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+                   <img id="nav55"style="cursor: pointer;" src="./img/search_FILL0_wght400_GRAD0_opsz48.svg" alt="">
                    <img src="./img/more_vert_FILL0_wght400_GRAD0_opsz48.svg" alt="">
                 </div>
             </div>
@@ -323,48 +335,106 @@
                     <p>Lorem ipsum dolor sit amet. <br> <span>12:15</span></p>
                 </div> 
             </div>
+            <div class="document">
+                <ul class="list">
+                    <li><span></span></li>
+                    <li><span></span></li>
+                    <li><span></span></li>
+                    <li><span></span></li>
+                    <li><span></span></li>
+                    <li><span></span></li>
+                </ul>
+            </div>
             <div class="chatinput">
               <img src="./img/sentiment_satisfied_FILL0_wght400_GRAD0_opsz48.svg">
-              <img src="./img/attach_file_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+              <img src="./img/attach_file_FILL0_wght400_GRAD0_opsz48.svg" id="img99"alt="">
               <input type="text" placeholder="bir mesaj yazın">
               <img src="./img/play_circle_FILL0_wght100_GRAD0_opsz48.svg" alt="">
             </div>
-            <script>
-                $( ".img55" ).click(function() {
-                  $( ".container  .side.box" ).show( "fold", 1000 );
-                  console.log("assaas")
-                });
-                </script>
-                <script>
-                    $( "#img82" ).click(function() {
-                      $( ".container  .side.box" ).hide( "drop", { direction: "down" }, "slow" );
-                    });
-                    </script>
-                    <script>
-                    /*
-                    $( ".img55" ).click(function() {
-                    $( ".container  .side.box" ).addClass( ".active", 1000, "easeOutBounce" ); console.log( "yaa");
-                    });*/
-                    </script>
+            
+                   
                   
         </div>
-        <script>
-            /*
-           $(".img55").click(function() {
-                $(".sidebox").addClass("active");
-               
-            })
-           / $("#img82").click(function() {
-                $(".sidebox").removeClass("active");
-              
-            })
-            $(".block").click(function() {
-                $("rightSide")
-            })
+        <div class="sideopen"id="sideopen">
+            <div class="sidehead1">
+                <span id="sidehd" class="material-symbols-outlined">
+                    close
+                    </span>
+                    <p>Mesajlarda Ara</p>
+            </div>
+           <div class="giris">
+            <input type="text" id="inputopen" placeholder="Ara..." >
+            <img src="./img/search_FILL0_wght400_GRAD0_opsz48.svg" class="search" alt="">
+           <img src="./img/arrow_back_FILL0_wght400_GRAD0_opsz48 (1).svg" class="arrow" alt="">
+           </div>
+           <div class="footer">
+            mesajlarda ara
+           </div>
+        </div>
+        </div>
             
-            */
-        </script>
+          
+            
+            
+        
     </div>
+    <script>
+        $("#img99").click(function(){
+        $(".document").addClass("active");
+        console.log( "ya23")
+    });
+     
+        $( "#img99" ).dblclick(function() {
+        if($(".document").hasClass("active")){
+            $(".document").removeClass("active");
+            console.log("ya24");
+        }});
+    $(".img83").click(function(){
+        $(".listhead").addClass("active");
+        console.log( "ya23")
+    });
+     
+        $( ".img83" ).dblclick(function() {
+        if($(".listhead").hasClass("active")){
+            $(".listhead").removeClass("active");
+            console.log("ya24");
+        }});
+         $(".search").click(function() {
+        $(".search").removeClass( "active" );
+        $( ".arrow" ).addClass( "active" ); 
+        
+        console.log( "yaa11");
+        });
+        $( ".arrow" ).click(function() {
+        $( ".search" ).addClass( "active" );
+         console.log( "yaa22");
+        });
+        
+        $( "#sidehd" ).click(function() {
+        $( ".rightcontainer" ).removeClass( "active" );
+         console.log( "yaa23");
+        });
+        $( ".arrow.active" ).click(function() {
+            $(".arrow").removeClass( "active" );
+        });
+        $( ".img55" ).click(function() {
+        $( ".container  .side.box" ).addClass( "active" ); console.log( "yaa");
+        });
+        $(".img82").click(function() {
+        if($(".container  .side.box").hasClass( "active" )){
+            $(".container  .side.box").removeClass("active")
+            console.log("yaaa");
+        }else{
+            
+        }})
+        $( "#button-container" ).click(function() {
+        $( ".container" ).addClass( "active"); console.log( "yaa");
+        });
+       
     
+        $( "#nav55" ).click(function() {
+        $( ".rightcontainer" ).addClass( "active" ); console.log( "yaa");
+        });
+        </script>
 </body>
-</html>
+</html> 
